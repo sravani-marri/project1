@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/CloudTechDevOps/fpjt.git'
+                git branch: 'main', url : 'https://github.com/sravani-marri/project1.git'
             }
         }
         stage('Sonarqube Analysis') {
@@ -82,7 +82,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/CloudTechDevOps/fpjt.git'
+                git branch: 'main', url: 'https://github.com/sravani-marri/project1.git'
             }
         }
         stage('Update Deployment file') {
