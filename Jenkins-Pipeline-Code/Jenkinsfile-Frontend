@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/CloudTechDevOps/fpjt.git'
+                git branch: 'main', url: 'https://github.com/sravani-marri/project1.git'
             }
         }
         stage('Sonarqube Analysis') {
@@ -81,7 +81,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/CloudTechDevOps/fpjt.git'
+                git branch: 'main', url: 'https://github.com/sravani-marri/project1.git'
             }
         }
         stage('Update Deployment file') {
@@ -93,7 +93,7 @@ pipeline {
                 dir('Kubernetes-Manifests-file/Frontend') {
                     withCredentials([string(credentialsId: 'github', variable: 'git_token')]) {
                         sh '''
-                            git config user.email "cloud87777@gmail.com"
+                            git config user.email "marrisravanireddy04@gmail.com"
                             git config user.name "sravani-marri"
                             BUILD_NUMBER=${BUILD_NUMBER}
                             echo $BUILD_NUMBER
